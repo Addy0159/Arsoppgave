@@ -1,0 +1,1036 @@
+/*genearlt*/
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #696969;
+    scrollbar-width: none;
+    font-family: "Segoe UI";
+    /* Firefox */
+}
+
+.head header {
+    background-color: #000000;
+    padding: 2%;
+    word-spacing: 0.4cm;
+    font-weight: bold;
+    font-size: 26px;
+    text-align: center;
+}
+
+
+
+.head a {
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.head a:hover {
+    color: rgb(49, 49, 49);
+}
+
+#Logo {
+    width: 5%;
+    height: 5%;
+}
+
+#cart {
+    width: 5%;
+    height: 5%;
+}
+
+#CA p {
+    display: none;
+}
+
+hr {
+    height: 1px;
+    border: none;
+    background-color: #696969;
+}
+
+#banner {
+    background-color: #4e4e4e;
+
+}
+
+#banner a {
+    color: #ffffff;
+}
+
+#banner a:hover {
+    color: #778899;
+}
+
+#banner h3 {
+    margin-top: 2%;
+    color: #ffffff;
+    font-size: 22px;
+
+    text-decoration: underline;
+}
+
+#banner p {
+    color: #ffffff;
+    font-size: 16px;
+
+}
+
+
+#OM h3 {
+    margin-left: 50px;
+
+}
+
+#OM p {
+    margin-left: 50px;
+    margin-right: 200px;
+
+}
+
+#KON p {
+    margin-right: 200px;
+}
+
+.collapsible {
+    display: none;
+}
+
+@media screen and (max-width: 414px) {
+    #banner h3 {
+        font-size: 15px;
+        margin-top: 2%;
+    }
+
+    #banner p {
+        font-size: 13px;
+    }
+
+    #OM h3 {
+        margin-left: 10px;
+
+    }
+
+    #OM p {
+        margin-left: 10px;
+        margin-right: -2px;
+
+    }
+
+    #KON p {
+        margin-right: 21px;
+    }
+
+    #OM {
+        width: 180px;
+    }
+
+    #KON {
+        width: 135px;
+    }
+
+    #SOS {
+        width: 100px;
+    }
+
+    .head {
+        padding: 0 18px;
+        display: none;
+        overflow: hidden;
+        background-color: #000000
+    }
+
+    #cart {
+        display: none;
+    }
+
+    #CA p {
+        display: block;
+    }
+
+    #Logo {
+        display: none;
+    }
+
+    .head header {
+        word-spacing: 0%;
+        font-size: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .collapsible {
+        background-color: #000000;
+        color: #ffffff;
+        cursor: pointer;
+        padding: 20px;
+        width: 100%;
+        border: none;
+        text-align: left;
+        outline: none;
+        font-size: 15px;
+        display: block;
+    }
+
+
+    .active,
+    .collapsible:hover {
+        background-color: #000000;
+    }
+}
+
+.dark {
+    background-color: black;
+    color: white;
+
+}
+
+.dark a {
+    color: rgb(255, 255, 255);
+}
+
+.dark a:hover {
+    color: #000000;
+}
+
+.dark header {
+    background-color: #111111;
+    color: #ffffff;
+}
+
+.dark h2 {
+    background-color: #201f1f;
+}
+
+.dark td {
+    color: black;
+}
+
+#dark {
+    background-color: #201f1f;
+    border: #000000 1px solid;
+    padding: 5px 10px;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 3px;
+    cursor: pointer;
+
+}
+
+.dark #banner {
+    background-color: #111111;
+}
+
+.dark button {
+    background-color: #201f1f;
+}
+
+
+
+
+@media screen and (min-width: 2560px) {
+    .head header {
+        font-size: 29px;
+        word-spacing: 2cm;
+        text-align: center;
+    }
+
+}
+
+
+
+/*Login*/
+
+
+
+input[type=text],
+input[type=password] {
+    width: 25%;
+    padding: 12px 20px;
+    margin-left: 25px;
+    margin: 10px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+
+
+/*HJem*/
+
+
+
+h2 {
+    background-color: #708090;
+    color: #ffffff;
+    margin-left: 0%;
+    margin-right: 0%;
+
+    font-weight: normal;
+    font-size: 30px;
+    text-align: center;
+    padding: 0.5%;
+
+}
+
+#Nye-Produkter {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#Nye-Produkter ul {
+    margin-left: -40px;
+    margin-right: 40px;
+    list-style: inline;
+}
+
+#RAM16 {
+    margin-right: 30%;
+}
+
+.Produkt {
+    display: flex;
+    flex-direction: column;
+    height: 379px;
+}
+
+.Produkt button {
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #778899;
+    margin-top: auto;
+}
+
+.Produkt p {
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+#Mest-Produkter {
+    display: flex;
+    justify-content: space-around;
+}
+
+#Mest-Produkter ul {
+    margin-left: 0px;
+    margin-right: 0px;
+    list-style: inline;
+}
+
+.Produkt1 {
+    display: flex;
+    flex-direction: column;
+    height: 379px;
+}
+
+.Produkt1 p {
+    color: #ffffff;
+
+    font-size: 20px;
+}
+
+.Produkt1 button {
+    flex-direction: column;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #778899;
+    margin-top: auto;
+}
+
+#Play img {
+    width: 372px;
+    height: 226px;
+}
+
+#Ti img {
+    width: 227px;
+    height: 222px;
+}
+
+#Kort img {
+    width: 185px;
+    height: 222px;
+}
+
+@media screen and (max-width: 414px) {
+    h2 {
+        font-size: 20px;
+        padding: 0.5%;
+    }
+
+
+
+    #Nye-Produkter {
+        flex-direction: column;
+    }
+
+    #Nye-Produkter ul {
+        margin-left: 20px;
+        margin-right: 0px;
+        list-style: inline;
+    }
+
+    .Produkt button {
+        font-size: 18px;
+    }
+
+    .Produkt p {
+        font-size: 20px;
+    }
+
+    #RAM img {
+        width: 60%;
+        height: 50%;
+    }
+
+    #RAM16 {
+        margin-right: 50%;
+    }
+
+    .GOpro-case img {
+        width: 60%;
+        height: 60%;
+    }
+
+    .GOpro-case button {
+        margin-right: 50%;
+    }
+
+    #pro {
+        width: 70%;
+        height: 50%;
+    }
+
+
+
+    .Produkt1 p {
+        font-size: 15px;
+    }
+
+    .Produkt1 button {
+        font-size: 16px;
+    }
+
+
+    #Mest-Produkter {
+        flex-direction: column;
+    }
+
+    #Play img {
+        width: 70%;
+        height: 60%;
+    }
+
+    #Ti img {
+        width: 70%;
+        height: 70%;
+    }
+
+    #Kort img {
+        width: 70%;
+        height: 70%;
+    }
+
+
+}
+
+/*VR*/
+
+.VR {
+    display: flex;
+    flex-direction: column;
+}
+
+.VR img {
+    float: left;
+}
+
+.VR p {
+    color: #ffffff;
+
+    font-size: 25px;
+    padding-top: 5.5%;
+    margin-left: 35%;
+}
+
+.VR button {
+    margin-left: 45%;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #778899;
+}
+
+.Info {
+    margin-right: 300px;
+}
+
+.popup {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.popup {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+
+.popup .popuptext {
+    font-size: 16px;
+    visibility: hidden;
+    width: 350px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -80px;
+}
+
+
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s
+}
+
+@media screen and (min-width: 2560px) {
+    .VR {
+        margin-left: 20%;
+    }
+
+    .VR img {
+        width: 25%;
+    }
+
+    .VR p {
+        font-size: 30px;
+        margin-left: 27%;
+
+    }
+
+    .VR button {
+        font-size: 30px;
+        margin-left: 25%;
+    }
+
+    .popup {
+        font-size: 30px;
+    }
+
+    .popup .popuptext {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width: 414px) {
+
+    .VR img {
+        width: 60%;
+    }
+
+    .VR p {
+        margin-left: 35%;
+        font-size: 17px;
+
+    }
+
+    .VR button {
+        margin-left: 2%;
+        font-size: 20px;
+    }
+
+    .popup {
+        font-size: 20px;
+    }
+
+    .popup .popuptext {
+        font-size: 13px;
+    }
+}
+
+/*VR-Tilbehør*/
+
+
+
+.VR-Tilbehør {
+    display: flex;
+    flex-direction: column;
+}
+
+.VRs img {
+    float: left;
+}
+
+.VR-Tilbehør p {
+    color: #ffffff;
+
+    font-size: 25px;
+    padding-top: 8%;
+    margin-left: 30%;
+}
+
+.VR-Tilbehør button {
+    margin-left: 55%;
+    flex-direction: column;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #778899;
+}
+
+@media screen and (min-width: 2560px) {
+    .VR-Tilbehør {
+        margin-left: 20%;
+    }
+
+    .VR-Tilbehør p {
+        margin-left: 25%;
+        padding-top: 5%;
+    }
+
+    .VR-Tilbehør button {
+        margin-left: 40%;
+    }
+
+    #Strap img {
+        width: 16%;
+    }
+
+    #utstyr img {
+        width: 19%;
+    }
+
+    #bateri img {
+        width: 14%;
+    }
+
+    #Case img {
+        width: 17%;
+    }
+
+    #Sense img {
+        width: 18%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .VR-Tilbehør {
+        margin-left: 1%;
+    }
+
+    .VR-Tilbehør p {
+        margin-left: 60%;
+        padding-top: 5%;
+    }
+
+    .VR-Tilbehør button {
+        margin-left: 15%;
+        font-size: 20px;
+    }
+
+    #Strap img {
+        width: 50%;
+    }
+
+    #utstyr img {
+        width: 55%;
+    }
+
+    #bateri img {
+        width: 45%;
+    }
+
+    #Case img {
+        width: 50%;
+    }
+
+    #Sense img {
+        width: 50%;
+    }
+}
+
+/*Kamera*/
+
+
+
+.Ca img {
+    float: left;
+}
+
+.Kamera img {
+    display: flex;
+    flex-direction: column;
+}
+
+.Kamera p {
+    color: #ffffff;
+
+    font-size: 25px;
+    margin-left: 23%;
+    padding-top: 3%;
+}
+
+.Kamera button {
+    margin-left: 40%;
+    flex-direction: column;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #778899;
+}
+
+@media screen and (min-width: 2560px) {
+    .Kamera {
+        margin-left: 20%;
+    }
+
+    .Kamera p {
+        padding-top: 6%;
+        margin-left: 18%;
+    }
+
+    .Kamera button {
+        margin-left: 30%;
+    }
+
+
+
+    #GOPRO p {
+        padding-top: 4%;
+    }
+
+    #Sony img {
+        width: 16%;
+    }
+
+    #Sony p {
+        padding-top: 3%;
+    }
+
+    #Camon img {
+        width: 15%;
+    }
+
+    #Fujifilm img {
+        width: 11%;
+    }
+
+    #Fujifilm p {
+        padding-top: 5%;
+    }
+
+    #ZV img {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .Kamera {
+        margin-left: 1%;
+    }
+
+    .Kamera p {
+        padding-top: 6%;
+        margin-left: 50%;
+    }
+
+    .Kamera button {
+        margin-left: 20%;
+        font-size: 20px;
+    }
+
+    #GOPRO img {
+        width: 50%;
+    }
+
+    #GOPRO p {
+        padding-top: 5%;
+    }
+
+    #Sony img {
+        width: 45%;
+    }
+
+    #Sony p {
+        padding-top: -6%;
+    }
+
+    #Camon img {
+        width: 50%;
+    }
+
+    #Fujifilm img {
+        width: 45%;
+    }
+
+    #Fujifilm p {
+        padding-top: 5%;
+    }
+
+    #ZV img {
+        width: 60%;
+    }
+}
+
+/*Kamera-Tilbehør*/
+
+
+
+.Kamera-Tilbehør {
+    display: flex;
+    flex-direction: column;
+}
+
+.Ass img {
+    float: left;
+}
+
+.Kamera-Tilbehør p {
+    color: #ffffff;
+    font-size: 25px;
+    margin-left: 23%;
+    padding-top: 5%;
+}
+
+.Kamera-Tilbehør button {
+    display: flex;
+    margin-left: 52%;
+    flex-direction: column;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #778899;
+}
+
+@media screen and (min-width: 2560px) {
+    .Kamera-Tilbehør {
+        margin-left: 20%;
+    }
+
+    .Kamera-Tilbehør p {
+        padding-top: 3%;
+        margin-left: 18%;
+    }
+
+    .Kamera-Tilbehør button {
+        margin-left: 35%;
+    }
+
+    #Chesty img {
+        width: 16%;
+    }
+
+    #Chesty p {
+        padding-top: 8%;
+        margin-left: 19%;
+    }
+
+    #case img {
+        width: 13%;
+    }
+
+    #bag img {
+        width: 17%;
+    }
+
+    #lens img {
+        width: 14%;
+    }
+
+    #Shotgun img {
+        width: 13%;
+    }
+}
+
+@media screen and (max-width: 414px) {
+    .Kamera-Tilbehør button {
+        margin-left: 52%;
+        font-size: 20px;
+    }
+
+    #Chesty img {
+        width: 50%;
+    }
+
+    #case img {
+        width: 45%;
+    }
+
+    #bag img {
+        width: 50%;
+    }
+
+    #lens img {
+        width: 40%;
+    }
+
+    #Shotgun img {
+        width: 40%;
+    }
+}
+
+/*Hardware&Software*/
+
+
+
+.ware p {
+    color: #ffffff;
+
+    font-size: 25px;
+    margin-left: 26%;
+    padding-top: 8%;
+}
+
+.ware button {
+    margin-left: 50%;
+    flex-direction: column;
+    font-size: 25px;
+    color: #ffffff;
+    background-color: #778899;
+}
+
+.ware {
+    display: flex;
+    flex-direction: column;
+}
+
+.ware img {
+    float: left;
+}
+
+#Hovedkort img {
+    width: 19%;
+}
+
+#ram img {
+    width: 23%;
+}
+
+#Windos10 img {
+    width: 23%;
+}
+
+#Adobe img {
+    width: 21%;
+}
+
+#Samsung img {
+    width: 24%;
+
+}
+
+#Samsung p {
+    padding-top: 3%;
+}
+
+@media screen and (min-width: 2560px) {
+    #Hovedkort img {
+        width: 16%;
+    }
+
+    #ram img {
+        width: 22%;
+    }
+
+    #Windos10 img {
+        width: 20%;
+    }
+
+    #Adobe img {
+        width: 16%;
+    }
+
+    .ware p {
+        padding-top: 7%;
+        margin-left: 24%;
+    }
+
+    .ware button {
+        margin-left: 40%;
+    }
+
+    .ware {
+        margin-left: 20%;
+    }
+
+    #Samsung img {
+        width: 20%;
+    }
+
+    #Samsung p {
+        padding-top: 4%;
+    }
+}
+
+
+
+/* Cart */
+
+
+
+#shopping-cart h1 {
+    color: #ffffff;
+    margin-left: 2%;
+
+}
+
+#shopping-cart table {
+    background-color: #F0F0F0;
+    height: 120px;
+    border-collapse: collapse;
+    width: auto;
+    margin: auto;
+}
+
+#shopping-cart table td {
+    background-color: white;
+    border: 2px solid black;
+    padding: 5px;
+
+    text-decoration: none;
+}
+
+#shopping-cart table tr {
+    background-color: white;
+    border: 4px solid black;
+    padding: 5px;
+
+    text-decoration: none;
+}
+
+#btnEmpty {
+    background-color: #ffffff;
+    border: #d00000 1px solid;
+    padding: 5px;
+    color: #d00000;
+    float: right;
+    text-decoration: none;
+    border-radius: 3px;
+    margin: 10px 39px;
+    cursor: pointer;
+
+}
+
+#sum table {
+    margin-right: 190px;
+    margin-top: -120px;
+    border-collapse: collapse;
+}

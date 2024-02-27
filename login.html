@@ -1,0 +1,56 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digistore</title>
+    <link rel="icon" type="image/x-icon" href="Bilder/Digistore-logos/Digistore-logos_white.png">
+</head>
+
+<body>
+    <button  type="button" class="collapsible">Menu</button>
+    <div class="head">
+        <header>
+            <img style="height: 10%;" id="Logo" src="Bilder/Digistore-logos/Digistore-logos_white.png" alt="Digistore-logos">
+            <a href="Index.html">Home</a>
+            <a href="VRs.html">VR</a>
+            <a href="VR-Accessory.html">VR-Accessory</a>
+            <a href="Cameras.html">Camera</a>
+            <a href="Camera-Accessory.html">Camera-Accessory</a>
+            <a href="Hardware&Software.html">Hardware/Software</a>
+            <a id="CA" href="Cart.html"><img style="height: 10%;" src="Bilder/Cart-white.png" alt="cart" id="cart"><p>Cart</p></a>
+        </header>
+    </div>
+
+    <button id="dark" onclick="dark()">Dark</button>
+
+    <button id="redirectButton" >Login inn</button>
+
+    <div class="Login">
+
+        
+        <p>Vennligst logg inn:</p>
+        <form method="post" action="login.php">
+            <label for="brukernavn"><b>Brukernavn:</b></label>
+            <br>
+            <input type="text" name="brukernavn" /><br />
+            <label for="passord"><b>Passord:</b></label>
+            <br>
+            <input type="password" name="passord" /><br />
+            <label for="epost"><b>Epost:</b></label>
+            <br>
+            <input type="text" name="epost" /><br />
+            
+            <input type="submit" value="Logg inn" name="submit" />
+        </form>
+    <p>Eller klikk <a href="registration.php">her</a> for å registrere ny bruker
+
+        
+        
+    </div>
+<script src="script.js"></script>
+</body>
+
+</html>
