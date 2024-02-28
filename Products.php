@@ -26,16 +26,18 @@ $result = $conn->query($sql);
 
 if ($result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
-        echo "Product Name: " . $row["name"] . "<br>";
-        echo "Price: " . $row["price"] . "<br>";
-        echo "Quantity: " . $row["quantity"] . "<br>";
-        echo "Product ID: " . $row["product_id"] . "<br>";
-        echo "Image: " . $row["img"] . "<br>";
-        echo "<br>";
+        $navn = "Product Name: " . $row["name"];
+        $Price = "Price: " . $row["price"];
+        $Quantity = "Quantity: " . $row["quantity"] ;
+        $ID = "Product ID: " . $row["product_id"] ;
+        $img = $row["img"] ;
+        echo "<img src='Bilder/Produkter/$img'  alt='Product' width='100px' height=100px'>";
+        echo "<div> $navn $Price $Quantity $ID $img </div>";
     }
 } else {
     echo "No products found.";
 }
+
 
 $conn->close();
 ?>
