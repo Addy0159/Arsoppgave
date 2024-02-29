@@ -31,7 +31,7 @@ if ($result->num_rows > 0) {
         $Quantity = "Quantity: " . $row["quantity"] ;
         $ID = $row["product_id"] ;
         $img = $row["img"] ;
-        echo "<div> <br><br> $navn <br> $Price <br> $Quantity <br>  </div>";
+        echo "<div> <br> $navn <br> $Price <br> $Quantity <br>  </div>";
         echo "<img src='$img'  alt='Product' width='150px' >";
     }
 } else {
