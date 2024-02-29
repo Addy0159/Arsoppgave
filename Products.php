@@ -29,10 +29,10 @@ if ($result->num_rows > 0) {
         $navn = "Product Name: " . $row["name"];
         $Price = "Price: " . $row["price"];
         $Quantity = "Quantity: " . $row["quantity"] ;
-        $ID = "Product ID: " . $row["product_id"] ;
+        $ID = $row["product_id"] ;
         $img = $row["img"] ;
-        echo "<img src='Bilder/Produkter/$img'  alt='Product' width='100px' height=100px'>";
-        echo "<div> $navn $Price $Quantity $ID $img </div>";
+        echo "<div> <br><br> $navn <br> $Price <br> $Quantity <br>  </div>";
+        echo "<img src='$img'  alt='Product' width='150px' >";
     }
 } else {
     echo "No products found.";
