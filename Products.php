@@ -24,15 +24,26 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 
+$desired_product_ids = array("RAM16", "HP", "GOPRO"); // Replace these IDs with the IDs of the products you want to retrieve
+
 if ($result->num_rows > 0) {
+    $found_products = array();
     while ($row = $result->fetch_assoc()) {
-        $navn = "Product Name: " . $row["name"];
-        $Price = "Price: " . $row["price"];
-        $Quantity = "Quantity: " . $row["quantity"] ;
-        $ID = $row["product_id"] ;
-        $img = $row["img"] ;
-        echo "<div> <br> $navn <br> $Price <br> $Quantity <br>  </div>";
-        echo "<img src='$img'  alt='Product' width='150px' >";
+        if (in_array($row["product_id"], $desired_product_ids)) {
+            $navn = "Product Name: " . $row["name"];
+            $Price = "Price: " . $row["price"];
+            $Quantity = "Quantity: " . $row["quantity"];
+            $ID = $row["product_id"];
+            $img = $row["img"];
+            echo "<div> <br> $navn <br> $Price <br> $Quantity <br> </div>";
+            echo "<img src='$img'  alt='Product' width='150px' >";
+            $found_products[] = $row["product_id"];
+        }
+    }
+    foreach ($desired_product_ids as $desired_product_id) {
+        if (!in_array($desired_product_id, $found_products)) {
+            echo "Product with ID $desired_product_id not found.<br>";
+        }
     }
 } else {
     echo "No products found.";
