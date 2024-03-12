@@ -166,7 +166,7 @@ function emptyCart() {
     table.innerHTML = ''
     const Summen = document.getElementById("Summen")
     Summen.innerHTML = ''
-
+    location.reload();
 }
 
 function Pro1() {

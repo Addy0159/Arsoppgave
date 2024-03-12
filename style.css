@@ -30,6 +30,43 @@ body {
     color: rgb(49, 49, 49);
 }
 
+.contain {
+    padding: 16px;
+}
+
+form {
+    margin-left: 30%;
+}
+
+input[type=text],
+input[type=password],
+input[type=tel],
+input[type=number] {
+    width: 50%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+.button {
+    background-color: #000000;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+}
+
+.button:hover {
+    opacity: 0.8;
+}
+
+
+
+
 #Logo {
     width: 5%;
     height: 5%;
@@ -246,16 +283,7 @@ hr {
 
 
 
-input[type=text],
-input[type=password] {
-    width: 25%;
-    padding: 12px 20px;
-    margin-left: 25px;
-    margin: 10px 0;
-    display: inline-block;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
-}
+
 
 
 
@@ -268,7 +296,6 @@ h2 {
     color: #ffffff;
     margin-left: 0%;
     margin-right: 0%;
-
     font-weight: normal;
     font-size: 30px;
     text-align: center;
@@ -1056,30 +1083,33 @@ h2 {
     text-align: left;
     outline: none;
     font-size: 15px;
-  }
-  
-  /* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
-  .active, .collapsible:hover {
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active,
+.collapsible:hover {
     background-color: #4e4e4e;
-  }
-  
-  /* Style the collapsible content. Note: hidden by default */
-  .content {
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
     padding: 0 18px;
     background-color: white;
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-out;
-  }
+}
 
-  .FAQ:after {
-    content: '\02795'; /* Unicode character for "plus" sign (+) */
+.FAQ:after {
+    content: '\02795';
+    /* Unicode character for "plus" sign (+) */
     font-size: 13px;
     color: white;
     float: right;
     margin-left: 5px;
-  }
-  
-  .active:after {
-    content: "\2796"; /* Unicode character for "minus" sign (-) */
-  }
+}
+
+.active:after {
+    content: "\2796";
+    /* Unicode character for "minus" sign (-) */
+}
