@@ -45,7 +45,42 @@
 		<p>Eller klikk <a href="register.php">her</a> for å registrere ny bruker
 
 	</div>
+	<br>
 
+	<div id="banner">
+		<table>
+			<td>
+				<div id="OM">
+					<h3>About us</h3>
+					<p>Digistore is an online store that <br> sells tech products with cheap prices <br>
+						The Portfolio to the owner <a href="My_work.html">Addy's Portfolio</a> <br><a
+							href="FAQ.html">More</a> </p>
+				</div>
+			</td>
+			<td>
+				<div id="KON">
+					<h3>Contact</h3>
+					<p>Email: <a href="mailTo: adam.a.v@outlook.com">adam.a.v@outlook.com</a><br>
+						Number: 458 57 340 <br>
+						<a href="https://www.google.com/maps?q=Kabelgata+10-12,+0580+Oslo&z=15" target="_blank"
+							arria-label="Kabelgata 10-12, 0580 Oslo - Open link"> <span>Kabelgata 10-12, 0580
+								Oslo</span></a>
+					</p>
+				</div>
+			</td>
+			<td>
+				<div id="SOS">
+					<h3>Sosial media</h3>
+					<p>
+						Instagram: <a href="https://www.instagram.com/adamahmed05/" target="_blank">Addy's Insta</a><br>
+						Twitter: <a href="https://twitter.com/005_addy" target="_blank">Addy's Twitter</a><br>
+						Linkdin: <a href="https://www.linkedin.com/in/adam-virk-579bb01aa/" target="_blank">Addy's
+							Linedin</a>
+					</p>
+				</div>
+			</td>
+		</table>
+	</div>
 
 </body>
 
@@ -60,10 +95,10 @@ $db = "termin";
 $conn = mysqli_connect($server, $user, $pw, $db) or die('noe gikk galt');
 
 // Process login form
-	if ($_SERVER["REQUEST_METHOD"] == "POST") {
-		$username = $_POST["username"];
-		$raw_password = $_POST["password"];
-		$hashed_password = hash('sha256', $raw_password);
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+	$username = $_POST["username"];
+	$raw_password = $_POST["password"];
+	$hashed_password = hash('sha256', $raw_password);
 
 	//  Gets the info from the database
 	$sql = "SELECT id, username, password, email FROM user WHERE username = '$username'";

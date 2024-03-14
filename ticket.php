@@ -73,4 +73,17 @@
     </div>
         <script src="script.js" async defer></script>
     </body>
+
+    <?php 
+    session_start();
+    $server = "localhost";
+    $user = "root";
+    $pw = "Admin";
+    $db = "ticket";
+    
+    $conn = mysqli_connect($server, $user, $pw, $db) or die('noe gikk galt');
+    
+    
+    
+    ?>
 </html>
