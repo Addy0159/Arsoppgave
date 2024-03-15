@@ -43,7 +43,7 @@
                     <label for="fname">First Name</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" name="firstname" placeholder="Your name..">
+                    <input type="text" name="FirstName" placeholder="Your name">
                 </div>
             </div>
             <div class="row">
@@ -51,7 +51,7 @@
                     <label for="lname">Last Name</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" name="lastname" placeholder="Your last name..">
+                    <input type="text" name="LastName" placeholder="Your last name">
                 </div>
             </div>
             <div class="row">
@@ -59,7 +59,7 @@
                     <label for="Email">Email</label>
                 </div>
                 <div class="col-75">
-                    <input type="text" name="Email" placeholder="Email">
+                    <input type="text" name="Email" placeholder="Your Email">
                 </div>
             </div>
             <div class="row">
@@ -125,19 +125,38 @@ $user = "root";
 $pw = "Admin";
 $db = "ticket";
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $firstname = $_POST["FName"];
-    $lastname = $_POST["LName"];
-    $email = $_POST["Email"];
-    $problem = $_POST["Problem"];
+$conn = mysqli_connect($server, $user, $pw, $db);
+
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
-$conn = mysqli_connect($server, $user, $pw, $db) or die('noe gikk galt');
 
-$sql = "INSERT INTO form (id, FName, LName, Email, Problem) VALUES (id, '$firstname', '$lastname', '$email', '$problem' )";
+// Check if form data is submitted
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Retrieve form data
+    $FirstName = $_POST['FirstName'];
+    $LastName = $_POST['LastName'];
+    $email = $_POST['Email'];
+    $problem = $_POST['Problem'];
 
-$result = mysqli_query($conn, $sql) or die('Noe gikk galt');
+    // Sanitize data to prevent SQL injection
+    $FirstName = mysqli_real_escape_string($conn, $FirstName);
+    $LastName = mysqli_real_escape_string($conn, $LastName);
+    $email = mysqli_real_escape_string($conn, $email);
+    $problem = mysqli_real_escape_string($conn, $problem);
 
-mysqli_close($conn);
+    // Insert data into the database
+    $sql = "INSERT INTO tickets (FirstName, LastName, Email, Problem) VALUES ('$FirstName', '$LastName', '$email', '$problem')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo '<script>console.log("New record created successfully");</script>';
+    } else {
+        echo "<script>console.log('Error: " . $sql . "<br>" . $conn->error . "');</script>";
+    }
+}
+
+$conn->close();
+
 ?>
 
 </html>
