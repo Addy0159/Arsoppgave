@@ -10,7 +10,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "Admin";
-$dbname = "product"; // Your database name
+$dbname = "termin"; // Your database name
 
 // Create a connection
 $conn = new mysqli($servername, $username, $password, $dbname);
