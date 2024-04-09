@@ -84,7 +84,6 @@
 
 </body>
 
-</html>
 <?php
 session_start();
 $server = "localhost";
@@ -96,35 +95,31 @@ $conn = mysqli_connect($server, $user, $pw, $db) or die('noe gikk galt');
 
 // Process login form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-	$username = $_POST["username"];
-	$raw_password = $_POST["password"];
-	$hashed_password = hash('sha256', $raw_password);
+    $username = $_POST["username"];
+    $raw_password = $_POST["password"];
+    $hashed_password = hash('sha256', $raw_password);
 
-	//  Gets the info from the database
-	$sql = "SELECT id, username, password, email FROM user WHERE username = '$username'";
-	$result = $conn->query($sql);
+    //  Gets the info from the database
+    $sql = "SELECT id, username, password, email FROM user WHERE username = '$username'";
+    $result = $conn->query($sql);
 
-	//  Checks that everything was done right 
-	if ($result->num_rows > 0) {
-		$row = $result->fetch_assoc();
-		if ($hashed_password == $row["password"]) {
-			header("Location: Index.html");
-			exit; // Make sure to exit after redirection
-		} else {
-			echo "Invalid password";
-		}
-	} else {
-		echo "User not found";
-	}
+    //  Checks that everything was done right 
+    if ($result->num_rows > 0) {
+        $row = $result->fetch_assoc();
+        if ($hashed_password == $row["password"]) {
+            // Store user information in session variables
+            $_SESSION["user_id"] = $row["id"];
+            $_SESSION["username"] = $row["username"];
+            header("Location: Index.php");
+            exit; // Make sure to exit after redirection
+        } else {
+            echo "Invalid password";
+        }
+    } else {
+        echo "User not found";
+    }
 }
 
-
-
-
-
-
-
-
 mysqli_close($conn);
-
 ?>
+</html>

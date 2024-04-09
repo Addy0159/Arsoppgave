@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+// Check if user is logged in
+if (isset($_SESSION["user_id"])) {
+    // User is logged in, send username to JavaScript
+    $username = $_SESSION["username"];
+    echo "<script>console.log('Welcome, $username!');</script>";
+} else {
+    // User is not logged in, send login link to JavaScript
+    echo "<script>console.log('<a href=\"Login.php\">Login</a>');</script>";
+}
+?>
 <html lang="en">
 
 <head>

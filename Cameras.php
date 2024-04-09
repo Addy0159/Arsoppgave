@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+// Check if user is logged in
+if (isset($_SESSION["user_id"])) {
+    // User is logged in, send username to JavaScript
+    $username = $_SESSION["username"];
+    echo "<script>console.log('Welcome, $username!');</script>";
+} else {
+    // User is not logged in, send login link to JavaScript
+    echo "<script>console.log('<a href=\"Login.php\">Login</a>');</script>";
+}
+?>
 <html lang="en">
 
 <head>
@@ -24,80 +37,72 @@
             <a id="CA" href="Cart.html"><img src="Bilder/Cart-white.png" alt="cart" id="cart"><p>Cart</p></a>
         </header>
     </div>
-
     <button id="dark" onclick="dark()">Dark</button>
-
     <button id="Login"><a href="Login.php">Login</a></button>
-    
-
-    <h2>New Products</h2>
-    <div id="Nye-Produkter">
-        <div id="RAM">
-            <ul class="Produkt">
-                <img src="Bilder/Produkter/RAM-16g.png" alt="RAM-16g">
-                <p> Kingston FURY Beast RGB <br> DDR4 3200MHz 16GB <br>
-                    899,-
-                </p>
-                <br> <button id="RAM16" >Add To Cart</button>
-            </ul>
-        </div>
-
-        <div class="GOpro-case">
-            <ul class="Produkt">
-                <img src="Bilder/Produkter/GOpro-case.png" alt="GOpro-case">
-                <p>GoPro Housing Hero9/10
-                    <br> 648,-
-                </p>
-                <br> <button id="GOpro-case" >Add To Cart</button>
-            </ul>
-        </div>
-
+    <div class="Kamera">
+        <br>
         <div id="GOPRO">
-            <ul class="Produkt">
-                <img id="pro" src="Bilder/Produkter/GOpro.png" alt="GOpro">
-                <p> GoPro HERO10 Black
-                <br> 5 990,-
+            <ul class="Ca">
+                <img src="Bilder/Produkter/GOPro.png" alt="GoPro HERO10 Black">
+                <p>GoPro HERO10 Black
+                    <br>5 990,-
+                    <br><button id="GOPRO">Add To Cart</button>
                 </p>
-                <button id="GOPRO" style="margin-right: 15%;">Add To Cart</button>
             </ul>
         </div>
+        <br>
+        <br>
+        <div id="Sony">
+            <ul class="Ca">
+                <img src="Bilder/Produkter/Kamera2.png" alt="Sony CyberShot RX100 Mark III compact camera">
+                <p>Sony CyberShot RX100
+                    <br> Mark III Compact Camera
+                    <br> 7 195,-
+                    <br><button id="Sony">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+        <br>
+        <div id="Camon">
+            <ul class="Ca">
+                <img src="Bilder/Produkter/Kamera3.png" alt="Canon EOS 2000D digital SLR camera + 18-55 DC3">
+                <p >Canon EOS 2000D Digital
+                    <br> SLR Camera + 18-55 DC3
+                    <br> 5 595,-
+                    <br><button id="Camon">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div id="Fujifilm">
+            <ul class="Ca">
+                <img src="Bilder/Produkter/Kamera4.png" alt="Fujifilm Instax Mini 11 compact camera (hvit) 999,-">
+                <p>Fujifilm Instax Mini 11
+                    <br> Compact Camera (hvit)
+                    <br> 999,-
+                    <br><button id="Fuji">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <div id="ZV">
+            <ul class="Ca">
+                <img src="Bilder/Produkter/Kamera5.png" alt="Sony ZV-1F digital camera for vlogging 7495,-">
+                <p>Sony ZV-1F Digital
+                    <br> Camera For Vlogging
+                    <br> 7 495,-"
+                    <br> <button id="ZV">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+        <br>
+        <br>
+        <br>
     </div>
-    <br>
-    <br>
-    <h2>Best-selling products</h2>
-    <div id="Mest-Produkter">
-        <div id="Play">
-            <ul class="Produkt1"> <img src="Bilder/Produkter/VR4.png" alt="PlayStation VR2 6 690,-">
-                <p> PlayStation VR2
-                    <br> 6 690,-
-                </p>
-                <br> <button id="PSVR2" style="margin-right: 42%;">Add To Cart</button>
-            </ul>
-        </div>
-
-        <div id="Ti">
-            <ul class="Produkt1">
-                <img src="Bilder/Produkter/Windos10.png" alt="Microsoft Office Home Student 2021 Norwegian 1 690,-">
-                <p>Microsoft Office Home Student
-                    <br> 2021 Norwegian
-                    <br> 1 690,-
-                </p>
-                <button id="Soft" style="margin-right: 32%;">Add To Cart</button>
-            </ul>
-        </div>
-
-        <div id="Kort">
-            <ul class="Produkt1">
-                <img src="Bilder/Produkter/Hovedkort.png" alt="ASUS TUF Gaming B650-PLUS WIFI Motherboard 2 490,-">
-                <p>ASUS TUF Gaming B650-PLUS
-                    <br> WIFI Motherboard
-                    <br> 2 490,-
-                </p>
-                <button id="Motherboard" style="margin-right: 20%;">Add To Cart</button>
-            </ul>
-        </div>
-    </div>
-    <br>
     <br>
     <br>
     <br>
@@ -114,7 +119,7 @@
                 <div id="OM">
                     <h3>About us</h3>
                     <p>Digistore is an online store that <br> sells tech products with cheap prices <br>
-                        The Portfolio to the owner <a href="My_work.html">Addy's Portfolio</a> <br><a href="FAQ.html">More</a> </p>
+                        The Portfolio to the owner <a href="My_work.html">Addy's Portfolio</a> </p>
                 </div>
             </td>
             <td>
@@ -134,15 +139,12 @@
                     <p>
                         Instagram: <a href="https://www.instagram.com/adamahmed05/" target="_blank">Addy's Insta</a><br>
                         Twitter: <a href="https://twitter.com/005_addy" target="_blank">Addy's Twitter</a><br>
-                        Linkdin: <a href="https://www.linkedin.com/in/adam-virk-579bb01aa/" target="_blank">Addy's
-                            Linedin</a>
+                        Linkdin: <a href="https://www.linkedin.com/in/adam-virk-579bb01aa/" target="_blank">Addy's Linedin</a>
                     </p>
                 </div>
             </td>
         </table>
     </div>
-
-
     <script src="script.js"></script>
 </body>
 

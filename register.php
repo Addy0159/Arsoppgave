@@ -60,44 +60,48 @@
         </form>
     </div>
 
+
+</body>
 <?php
 $server = "localhost";
 $user = "root";
 $pw = "Admin";
 $db = "termin";
 
-$conn = mysqli_connect($server, $user, $pw, $db) or die ('noe gikk galt');
-
-
-
+$conn = mysqli_connect($server, $user, $pw, $db) or die('noe gikk galt');
 
 // Process registration form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST["username"];
+    // Escape user inputs for security
+    $username = mysqli_real_escape_string($conn, $_POST["username"]);
     $password = hash('sha256', $_POST["password"]);
-    $email = $_POST["email"];
-    $number = $_POST["number"];
-    $address = $_POST["address"];
-    $postnumber = $_POST["postnumber"];
-    $city = $_POST["city"];
+    $email = mysqli_real_escape_string($conn, $_POST["email"]);
+    $number = mysqli_real_escape_string($conn, $_POST["number"]);
+    $address = mysqli_real_escape_string($conn, $_POST["address"]);
+    $postnumber = mysqli_real_escape_string($conn, $_POST["postnumber"]);
+    $city = mysqli_real_escape_string($conn, $_POST["city"]);
 
-// Sends the the info into the database
-    $sql = "INSERT INTO user (id, username, password, email, number, address, postnumber, city) VALUES (id, '$username', '$password', '$email', '$number', '$address', '$postnumber', '$city')";
+    // Insert user data into the database
+    $sql = "INSERT INTO user (username, password, email, number, address, postnumber, city) 
+            VALUES ('$username', '$password', '$email', '$number', '$address', '$postnumber', '$city')";
 
-//  Checks that everything was done right 
-$result = mysqli_query($conn, $sql) or die('Noe gikk galt');
+    // Execute the query
+    $result = mysqli_query($conn, $sql);
+
+    // Check if the query was successful
+    if ($result) {
+        // Registration successful, redirect to login page
+        header("Location: Login.php");
+        exit;
+    } else {
+        // Registration failed
+        echo "Registration failed. Please try again later.";
+    }
+}
 
 // Close the MySQL connection
 mysqli_close($conn);
-
-// Redirect to a new HTML page
-header("Location: Login.php");
-exit;
-}
-
-
 ?>
-</body>
 
 </html>
 

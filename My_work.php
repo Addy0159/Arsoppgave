@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+// Check if user is logged in
+if (isset($_SESSION["user_id"])) {
+    // User is logged in, send username to JavaScript
+    $username = $_SESSION["username"];
+    echo "<script>console.log('Welcome, $username!');</script>";
+} else {
+    // User is not logged in, send login link to JavaScript
+    echo "<script>console.log('<a href=\"Login.php\">Login</a>');</script>";
+}
+?>
 <html lang="en">
 
 <head>
@@ -7,11 +20,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gallery</title>
+  <title>Portfolio</title>
 </head>
 
 <body>
   <header>
+    
     <img id="Logo" src="Bilder/Digistore-logos/Digistore-logos_white.png" alt="Digistore-logos">
     <a href="Index.html">Home</a>
     <a href="My_work.html">Portfolio</a>
@@ -20,57 +34,48 @@
   </header>
   <button id="dark" onclick="dark()">Dark</button>
   <button id="Login"><a href="Login.php">Login</a></button>
-  <div id="Gallery">
-    <table>
-      <tr>
-        <td>
-          <img class="døden" src="Bilder/Gallery/Doden1.jpg"
-            alt="Bilde fra forestillingen døden på oslo s på økern senteret">
-        </td>
+  <div id="My_work">
+    <h1>Portfolio</h1>
+    <section>
+      <div class="row">
+        <div><img src="Bilder/Min_Cinemagraph_oppgave.gif" alt="Min_Cinemagraph_oppgave" class="cinemag">
+          My first project in photoshop it was a cinemagraph </div>
 
-        <td>
-          <img class="døden" src="Bilder/Gallery/Doden2.jpg"
-            alt="Bilde fra forestillingen døden på oslo s på økern senteret">
-        </td>
+        <div><a href="Oslo_Lacrosse/index2.html" target="_blank">
 
-        <td>
-          <img src="Bilder/Gallery/Sun-Set.jpg" alt="Sol ned gang">
-        </td>
-      </tr>
+            <img src="Oslo_Lacrosse/Bilder_OsloLacrosse/Logo_text.svg" alt="oslo_lacrosse" class="oslolacrossebilde">The
+            first website i made, it was made for Oslo Lacrosse</a></div>
 
-      <tr>
-        <td>
-          <img src="Bilder/Gallery/Tres.jpg" alt="Trær i høst tiden">
-        </td>
+      </div>
+      <div class="line-break"></div>
 
-        <td>
-          <img src="Bilder/Gallery/Pretty_Clouds.jpg" alt="Skyer i sol ned gang">
-        </td>
+      <div class="row">
 
-        <td>
-          <img src="Bilder/Gallery/Ice_Thing.jpg" alt="isskulptur på stovner senteret">
-        </td>
+        <div class="Reklame"><video src="Video/Digi_Store_Ad.mp4" controls>Reklame </video>
+          Digistore Reklame</div>
 
-      </tr>
+        <div><video src="video/Kuben_News.mp4" class="kuben_news" controls>kuben news</video> <br>
+        A News segment projet we made at the school-studio </div>
 
-      <tr>
-        <td>
-          <img src="Bilder/Gallery/Forest.jpg" alt="Skog på lutvann">
-        </td>
+      </div>
+      <div class="line-break"></div>
+      <div class="row">
+        <div class="Kris"><a href="https://krissupport.tk/" target="_blank"> <img src="Bilder/Kris.png"
+              alt="Krissupport UB">
+            Krissupport is an IT support service for people struggling with IT problems.
+          </a></div>
 
-        <td>
-          <img src="Bilder/Gallery/Lake.jpg" alt="innsjø på lutvann">
-        </td>
+        <div><a href="Okern_Basket_IL/Okern_Basket_IL_designmanual.pdf" target="_blank">
+            <img src="Bilder/Logo_til_okern_IL.png" alt="Økern Basket IL designmanual"
+              id="Økern_Basket_IL_designmanual">This is my first attempt on a design manual</a> <br>
+        </div>
 
-        <td>
-          <img src="Bilder/Gallery/Clouds5.jpg" alt="Skyer">
-        </td>
-      </tr>
-    </table>
+
+
+      </div>
+    </section>
+    <br><br><br>
   </div>
-  <br>
-  <br>
-
 
   <div id="banner">
     <table>

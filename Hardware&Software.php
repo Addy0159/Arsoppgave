@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+// Check if user is logged in
+if (isset($_SESSION["user_id"])) {
+    // User is logged in, send username to JavaScript
+    $username = $_SESSION["username"];
+    echo "<script>console.log('Welcome, $username!');</script>";
+} else {
+    // User is not logged in, send login link to JavaScript
+    echo "<script>console.log('<a href=\"Login.php\">Login</a>');</script>";
+}
+?>
 <html lang="en">
 
 <head>
@@ -8,6 +21,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digistore</title>
     <link rel="icon" type="image/x-icon" href="Bilder/Digistore-logos/Digistore-logos_white.png">
+
+
+
 </head>
 
 <body>
@@ -24,81 +40,70 @@
             <a id="CA" href="Cart.html"><img src="Bilder/Cart-white.png" alt="cart" id="cart"><p>Cart</p></a>
         </header>
     </div>
+
+    
     <button id="dark" onclick="dark()">Dark</button>
     <button id="Login"><a href="Login.php">Login</a></button>
-    <div class="Kamera">
+    <div class="ware">
         <br>
-        <div id="GOPRO">
-            <ul class="Ca">
-                <img src="Bilder/Produkter/GOPro.png" alt="GoPro HERO10 Black">
-                <p>GoPro HERO10 Black
-                    <br>5 990,-
-                    <br><button id="GOPRO">Add To Cart</button>
+        <div id="Hovedkort">
+            <ul>
+                <img src="Bilder/Produkter/Hovedkort.png" alt="ASUS TUF Gaming B650-PLUS WIFI Hovedkor 2 490,-">
+                <p>ASUS TUF Gaming B650-PLUS
+                    <br>WIFI Motherboard
+                    <br>2 490,-
+                    <br><button id="Motherboard">Add To Cart</button>
                 </p>
             </ul>
         </div>
-        <br>
-        <br>
-        <div id="Sony">
-            <ul class="Ca">
-                <img src="Bilder/Produkter/Kamera2.png" alt="Sony CyberShot RX100 Mark III compact camera">
-                <p>Sony CyberShot RX100
-                    <br> Mark III Compact Camera
-                    <br> 7 195,-
-                    <br><button id="Sony">Add To Cart</button>
-                </p>
-            </ul>
-        </div>
-        <br>
-        <div id="Camon">
-            <ul class="Ca">
-                <img src="Bilder/Produkter/Kamera3.png" alt="Canon EOS 2000D digital SLR camera + 18-55 DC3">
-                <p >Canon EOS 2000D Digital
-                    <br> SLR Camera + 18-55 DC3
-                    <br> 5 595,-
-                    <br><button id="Camon">Add To Cart</button>
-                </p>
-            </ul>
-        </div>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div id="Fujifilm">
-            <ul class="Ca">
-                <img src="Bilder/Produkter/Kamera4.png" alt="Fujifilm Instax Mini 11 compact camera (hvit) 999,-">
-                <p>Fujifilm Instax Mini 11
-                    <br> Compact Camera (hvit)
-                    <br> 999,-
-                    <br><button id="Fuji">Add To Cart</button>
-                </p>
-            </ul>
-        </div>
-        <br>
-        <br>
-        <div id="ZV">
-            <ul class="Ca">
-                <img src="Bilder/Produkter/Kamera5.png" alt="Sony ZV-1F digital camera for vlogging 7495,-">
-                <p>Sony ZV-1F Digital
-                    <br> Camera For Vlogging
-                    <br> 7 495,-"
-                    <br> <button id="ZV">Add To Cart</button>
-                </p>
-            </ul>
-        </div>
-        <br>
-        <br>
-        <br>
-    </div>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
 
+        <div id="ram">
+            <ul>
+                <img src="Bilder/Produkter/RAM-16g.png" alt="Kingston FURY Beast RGB DDR4 3200MHz 16GB 899,-">
+                <p>Kingston FURY Beast RGB
+                    <br> DDR4 3200MHz 16GB
+                    <br>899,-
+                    <br><button id="RAM16">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+
+        <div id="Windos10">
+            <ul>
+                <img src="Bilder/Produkter/Windos10.png" alt="Microsoft Office Home Student 2021 Norwegian 1 690,-">
+                <p>Microsoft Office Home
+                    <br> Student 2021 Norwegian
+                    <br>1 690,-
+                    <br><button id="Soft">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+
+        <div id="Adobe">
+            <ul>
+                <img src="Bilder/Produkter/adobe.png"
+                    alt="Adobe Creative Cloud 1-YEAR SUBSCRIPTION - PC Windows 6999,-">
+                <p>Adobe Creative Cloud
+                    <br> 1-YEAR SUBSCRIPTION
+                    <br>6 999,-
+                    <br><button id="Adobe">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+
+        <div id="Samsung">
+            <ul>
+                <img src="Bilder/Produkter/Samsung.png" alt="Samsung 870 QVO 2.5'' SSD 8TB 6 095,-">
+                <p>
+                    <br>Samsung 870 QVO 2.5''
+                    <br>SSD 8TB 6 095,-
+                    <br><button id="Samsung">Add To Cart</button>
+                </p>
+            </ul>
+        </div>
+    </div>
+
+    <br><br><br><br><br><br>
 
     <div id="banner">
         <table>

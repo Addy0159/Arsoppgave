@@ -24,7 +24,7 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 
-$desired_product_ids = array("RAM16", "HP", "GOPRO"); // Replace these IDs with the IDs of the products you want to retrieve
+$desired_product_ids = array("RAM16", "HP", "PSVR2"); // Replace these IDs with the IDs of the products you want to retrieve
 
 if ($result->num_rows > 0) {
     $found_products = array();

@@ -1,3 +1,8 @@
+// This function logs messages received from PHP to the browser console
+function logMessage(message) {
+    console.log(message);
+}
+
 console.log(localStorage.getItem("darkmode"))
 
 if (localStorage.getItem("darkmode") == "dark") {

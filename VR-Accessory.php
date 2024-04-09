@@ -1,4 +1,17 @@
 <!DOCTYPE html>
+<?php
+session_start();
+
+// Check if user is logged in
+if (isset($_SESSION["user_id"])) {
+    // User is logged in, send username to JavaScript
+    $username = $_SESSION["username"];
+    echo "<script>console.log('Welcome, $username!');</script>";
+} else {
+    // User is not logged in, send login link to JavaScript
+    echo "<script>console.log('<a href=\"Login.php\">Login</a>');</script>";
+}
+?>
 <html lang="en">
 
 <head>
@@ -8,9 +21,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Digistore</title>
     <link rel="icon" type="image/x-icon" href="Bilder/Digistore-logos/Digistore-logos_white.png">
-
-
-
 </head>
 
 <body>
@@ -27,70 +37,59 @@
             <a id="CA" href="Cart.html"><img src="Bilder/Cart-white.png" alt="cart" id="cart"><p>Cart</p></a>
         </header>
     </div>
-
-    
     <button id="dark" onclick="dark()">Dark</button>
     <button id="Login"><a href="Login.php">Login</a></button>
-    <div class="ware">
-        <br>
-        <div id="Hovedkort">
-            <ul>
-                <img src="Bilder/Produkter/Hovedkort.png" alt="ASUS TUF Gaming B650-PLUS WIFI Hovedkor 2 490,-">
-                <p>ASUS TUF Gaming B650-PLUS
-                    <br>WIFI Motherboard
-                    <br>2 490,-
-                    <br><button id="Motherboard">Add To Cart</button>
-                </p>
+    <br>
+    <div class="VR-Tilbehør">
+        <div id="Strap">
+            <ul class="VRs">
+                <img src="Bilder/Produkter/VR-Strap.png" alt="Meta Quest 2 Elite-reim 799,-">
+                <p>Meta Quest 2 Elite-reim <br>
+                    799,-<br> <button id="reim">Add To Cart</button> </p>
+            </ul>
+        </div>
+        <div id="utstyr">
+            <br>
+            <ul class="VRs">
+                <img src="Bilder/Produkter/VR-utstyr.png" alt="HWireless Adapter Full Pack with clip 4 499,-(sort/blå)">
+                <p> Wireless Adapter Full Pack with clip <br>
+                    4 499,- <br><button id="Pack">Add To Cart</button> </p>
             </ul>
         </div>
 
-        <div id="ram">
-            <ul>
-                <img src="Bilder/Produkter/RAM-16g.png" alt="Kingston FURY Beast RGB DDR4 3200MHz 16GB 899,-">
-                <p>Kingston FURY Beast RGB
-                    <br> DDR4 3200MHz 16GB
-                    <br>899,-
-                    <br><button id="RAM16">Add To Cart</button>
-                </p>
+        <div id="bateri">
+            <ul class="VRs">
+                <img src="Bilder/Produkter/VR-extra-bateri.png" alt="HTC VIVE Base Station 2.0 2 490,-">
+                <p>HTC VIVE Base Station 2.0 <br>
+                    2 490,- <br><button id="VIVE">Add To Cart</button> </p>
             </ul>
         </div>
 
-        <div id="Windos10">
-            <ul>
-                <img src="Bilder/Produkter/Windos10.png" alt="Microsoft Office Home Student 2021 Norwegian 1 690,-">
-                <p>Microsoft Office Home
-                    <br> Student 2021 Norwegian
-                    <br>1 690,-
-                    <br><button id="Soft">Add To Cart</button>
-                </p>
+        <div id="Case">
+            <ul class="VRs">
+                <img src="Bilder/Produkter/VR-case.png" alt="HTC VIVE Focus 3 Charging Carry Case 2 039,-">
+                <p>HTC VIVE Focus 3 Charging Carry Case <br>
+                    2 039,- <br><button id="Case">Add To Cart</button></p>
             </ul>
         </div>
 
-        <div id="Adobe">
-            <ul>
-                <img src="Bilder/Produkter/adobe.png"
-                    alt="Adobe Creative Cloud 1-YEAR SUBSCRIPTION - PC Windows 6999,-">
-                <p>Adobe Creative Cloud
-                    <br> 1-YEAR SUBSCRIPTION
-                    <br>6 999,-
-                    <br><button id="Adobe">Add To Cart</button>
-                </p>
-            </ul>
-        </div>
-
-        <div id="Samsung">
-            <ul>
-                <img src="Bilder/Produkter/Samsung.png" alt="Samsung 870 QVO 2.5'' SSD 8TB 6 095,-">
-                <p>
-                    <br>Samsung 870 QVO 2.5''
-                    <br>SSD 8TB 6 095,-
-                    <br><button id="Samsung">Add To Cart</button>
-                </p>
+        <div id="Sense">
+            <ul class="VRs">
+                <img src="Bilder/Produkter/Sense.png" alt="PlayStation VR2 Sense charging station 529,-">
+                <p>PlayStation VR2 Sense charging station <br>
+                    529,- <br><button id="Sense">Add To Cart</button></p>
             </ul>
         </div>
     </div>
-
-    <br><br><br><br><br><br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
 
     <div id="banner">
         <table>
@@ -125,6 +124,7 @@
         </table>
     </div>
     <script src="script.js"></script>
+
 </body>
 
 </html>
