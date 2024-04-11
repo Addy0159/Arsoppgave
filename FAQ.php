@@ -28,13 +28,13 @@ if (isset($_SESSION["user_id"])) {
     <div class="head">
         <header>
             <img id="Logo" src="Bilder/Digistore-logos/Digistore-logos_white.png" alt="Digistore-logos">
-            <a href="Index.html">Home</a>
-            <a href="VRs.html">VR</a>
-            <a href="VR-Accessory.html">VR-Accessory</a>
-            <a href="Cameras.html">Camera</a>
-            <a href="Camera-Accessory.html">Camera-Accessory</a>
-            <a href="Hardware&Software.html">Hardware/Software</a>
-            <a id="CA" href="Cart.html"><img src="Bilder/Cart-white.png" alt="cart" id="cart">
+            <a href="Index.php">Home</a>
+            <a href="VRs.php">VR</a>
+            <a href="VR-Accessory.php">VR-Accessory</a>
+            <a href="Cameras.php">Camera</a>
+            <a href="Camera-Accessory.php">Camera-Accessory</a>
+            <a href="Hardware&Software.php">Hardware/Software</a>
+            <a id="CA" href="Cart.php"><img src="Bilder/Cart-white.png" alt="cart" id="cart">
                 <p>Cart</p>
             </a>
         </header>
@@ -92,8 +92,7 @@ if (isset($_SESSION["user_id"])) {
                 <div id="OM">
                     <h3>About us</h3>
                     <p>Digistore is an online store that <br> sells tech products with cheap prices <br>
-                        The Portfolio to the owner <a href="My_work.html">Addy's Portfolio</a> <br><a
-                            href="FAQ.html">More</a> </p>
+                        The Portfolio to the owner <a href="My_work.php">Addy's Portfolio</a> 
                 </div>
             </td>
             <td>
@@ -104,7 +103,7 @@ if (isset($_SESSION["user_id"])) {
                         <a href="https://www.google.com/maps?q=Kabelgata+10-12,+0580+Oslo&z=15" target="_blank"
                             arria-label="Kabelgata 10-12, 0580 Oslo - Open link"> <span>Kabelgata 10-12, 0580
                                 Oslo</span></a> <br> <a
-                                href="FAQ.html">FAQ</a> </p>
+                                href="FAQ.php">FAQ</a> </p>
                     </p>
                 </div>
             </td>

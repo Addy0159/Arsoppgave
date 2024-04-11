@@ -28,13 +28,13 @@ if (isset($_SESSION["user_id"])) {
     <div class="head">
         <header>
             <img id="Logo" src="Bilder/Digistore-logos/Digistore-logos_white.png" alt="Digistore-logos">
-            <a href="Index.html">Home</a>
-            <a href="VRs.html">VR</a>
-            <a href="VR-Accessory.html">VR-Accessory</a>
-            <a href="Cameras.html">Camera</a>
-            <a href="Camera-Accessory.html">Camera-Accessory</a>
-            <a href="Hardware&Software.html">Hardware/Software</a>
-            <a id="CA" href="Cart.html"><img src="Bilder/Cart-white.png" alt="cart" id="cart"><p>Cart</p></a>
+            <a href="Index.php">Home</a>
+            <a href="VRs.php">VR</a>
+            <a href="VR-Accessory.php">VR-Accessory</a>
+            <a href="Cameras.php">Camera</a>
+            <a href="Camera-Accessory.php">Camera-Accessory</a>
+            <a href="Hardware&Software.php">Hardware/Software</a>
+            <a id="CA" href="Cart.php"><img src="Bilder/Cart-white.png" alt="cart" id="cart"><p>Cart</p></a>
         </header>
     </div>
     <button id="dark" onclick="dark()">Dark</button>
@@ -97,17 +97,18 @@ if (isset($_SESSION["user_id"])) {
                 <div id="OM">
                     <h3>About us</h3>
                     <p>Digistore is an online store that <br> sells tech products with cheap prices <br>
-                        The Portfolio to the owner <a href="My_work.html">Addy's Portfolio</a> </p>
+                        The Portfolio to the owner <a href="My_work.php">Addy's Portfolio</a> 
                 </div>
             </td>
             <td>
                 <div id="KON">
-                    <h3>Contact</h3>
+                    <h3>Info</h3>
                     <p>Email: <a href="mailTo: adam.a.v@outlook.com">adam.a.v@outlook.com</a><br>
                         Number: 458 57 340 <br>
                         <a href="https://www.google.com/maps?q=Kabelgata+10-12,+0580+Oslo&z=15" target="_blank"
                             arria-label="Kabelgata 10-12, 0580 Oslo - Open link"> <span>Kabelgata 10-12, 0580
-                                Oslo</span></a>
+                                Oslo</span></a> <br> <a
+                                href="FAQ.php">FAQ</a> </p>
                     </p>
                 </div>
             </td>
@@ -117,13 +118,17 @@ if (isset($_SESSION["user_id"])) {
                     <p>
                         Instagram: <a href="https://www.instagram.com/adamahmed05/" target="_blank">Addy's Insta</a><br>
                         Twitter: <a href="https://twitter.com/005_addy" target="_blank">Addy's Twitter</a><br>
-                        Linkdin: <a href="https://www.linkedin.com/in/adam-virk-579bb01aa/" target="_blank">Addy's Linedin</a>
+                        Linkdin: <a href="https://www.linkedin.com/in/adam-virk-579bb01aa/" target="_blank">Addy's
+                            Linedin</a>
                     </p>
                 </div>
             </td>
         </table>
     </div>
+
+
     <script src="script.js"></script>
+    <script src="Faq.js"></script>
 
 </body>
 

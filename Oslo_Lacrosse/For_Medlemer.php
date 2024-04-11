@@ -12,10 +12,10 @@
 
 <body>
     <div id="topdel">
-        <a href="index2.html" class="logopanda"><img src="./Bilder_OsloLacrosse/Logo_panda.svg" alt="Logo_panda"
+        <a href="index2.php" class="logopanda"><img src="./Bilder_OsloLacrosse/Logo_panda.svg" alt="Logo_panda"
                 class="logopandaa"></a>
-        <a href="For_Medlemer.html" class="toptext">For Medlemmer</a>
-        <a href="Bilder.html" class="toptext">Bilder</a>
+        <a href="For_Medlemer.php" class="toptext">For Medlemmer</a>
+        <a href="Bilder.php" class="toptext">Bilder</a>
     </div>
     <button id="dark" onclick="dark()">Dark</button>
     <div id="tabell">
