@@ -136,16 +136,7 @@ if (isset($_SESSION["user_id"])) {
 </body>
 
 <?php
-$server = "localhost";
-$user = "root";
-$pw = "Admin";
-$db = "ticket";
-
-$conn = mysqli_connect($server, $user, $pw, $db);
-
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+include 'db_connect.php';
 
 // Check if form data is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

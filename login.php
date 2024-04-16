@@ -89,13 +89,7 @@
 </body>
 
 <?php
-session_start();
-$server = "localhost";
-$user = "root";
-$pw = "Admin";
-$db = "termin";
-
-$conn = mysqli_connect($server, $user, $pw, $db) or die('noe gikk galt');
+include 'db_connect.php';
 
 // Process login form
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

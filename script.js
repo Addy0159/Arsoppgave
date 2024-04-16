@@ -3,6 +3,8 @@ function logMessage(message) {
     console.log(message);
 }
 
+
+
 console.log(localStorage.getItem("darkmode"))
 
 if (localStorage.getItem("darkmode") == "dark") {
@@ -38,7 +40,7 @@ let allProducts;
 if (localStorage.getItem("cart")) {
     allProducts = JSON.parse(localStorage.getItem("cart"))
 } else {
-        allProducts = [
+    allProducts = [
         { name: "Kingston FURY Beast RGB DDR4 3200MHz 16GB", price: 899, quantity: 0, id: "RAM16", img: "Bilder/Produkter/RAM-16g.png" },
         { name: "GOPro-case", price: 648, quantity: 0, id: "GOpro-case", img: "Bilder/Produkter/GOpro-case.png" },
         { name: "GoPro HERO10 Black", price: 5990, quantity: 0, id: "GOPRO", img: "Bilder/Produkter/GOpro.png" },
@@ -63,8 +65,7 @@ if (localStorage.getItem("cart")) {
         { name: "Samyang AF 14mm", price: 7795, quantity: 0, id: "Samyang", img: "Bilder/Produkter/Kamera.til2.png" },
         { name: "Vlogger Shotgun Microphone - ECM-G1", price: 1615, quantity: 0, id: "Shotgun", img: "Bilder/Produkter/Accessories.png" },
         { name: "Adobe Creative Cloud 1-YEAR SUBSCRIPTION", price: 6999, quantity: 0, id: "Adobe", img: "Bilder/Produkter/adobe.png" },
-        { name: "Samsung 870 QVO 2.5'' SSD 8TB", price: 6095, quantity: 0, id: "Samsung", img: "Bilder/Produkter/Samsung.png" },
-            ]
+        { name: "Samsung 870 QVO 2.5'' SSD 8TB", price: 6095, quantity: 0, id: "Samsung", img: "Bilder/Produkter/Samsung.png" },]
 }
 
 if (location.href.includes("Index")) {
@@ -193,15 +194,15 @@ var coll = document.getElementsByClassName("collapsible");
 var i;
 
 for (i = 0; i < coll.length; i++) {
-  coll[i].addEventListener("click", function() {
-    this.classList.toggle("active");
-    var head = this.nextElementSibling;
-    if (head.style.display === "block") {
-        head.style.display = "none";
-    } else {
-        head.style.display = "block";
-    }
-  });
-} 
+    coll[i].addEventListener("click", function () {
+        this.classList.toggle("active");
+        var head = this.nextElementSibling;
+        if (head.style.display === "block") {
+            head.style.display = "none";
+        } else {
+            head.style.display = "block";
+        }
+    });
+}
 
 console.log();

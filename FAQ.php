@@ -50,14 +50,18 @@ if (isset($_SESSION["user_id"])) {
         <h2>Frequently Asked Questions</h2>
         <br>
         
-        <button type="button" class="FAQ">When is Digistore open?</button>
+        <button type="button" class="FAQ">When are employees available? </button>
         <div class="content">
-            <p>Lorem ipsum...</p>
+            <p>Employees are available between 8 am and 4pm <br> 
+            you can always send us an email <br> 
+            when are employees aren't available we answer you as soon as possible  </p>
         </div>
         <br>
-        <button type="button" class="FAQ">When is Digistore open?</button>
+        <button type="button" class="FAQ">How much does it cost to return a product?</button>
         <div class="content">
-            <p>Lorem ipsum...</p>
+            <p>As a private customer, it is free of charge to return a product for open purchase. <br>
+             You can get a pre-franked delivery note by creating an open purchase on your product. <br>
+             You will receive instructions by e-mail.</p>
         </div>
         <br>
         <button type="button" class="FAQ">When is Digistore open?</button>

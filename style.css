@@ -181,6 +181,26 @@ hr {
 }
 
 /*Login*/
+
+
+
+#Login {
+    background-color: #778899;
+    border: #000000 1px solid;
+    padding: 5px 10px;
+    border-radius: 3px;
+    cursor: pointer
+}
+
+#Login a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+#Login a:hover {
+    color: #000000;
+}
+
 .contain {
     padding: 16px;
 }
