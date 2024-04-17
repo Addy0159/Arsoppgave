@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="style.css">
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Digistore</title>
+    <link rel="icon" type="image/x-icon" href="Bilder/Digistore-logos/Digistore-logos_white.png">
+
+
+
 </head>
 <body>
+<button  type="button" class="collapsible">Menu</button>
+    <div class="head">
+        <header>
+            <img id="Logo" src="Bilder/Digistore-logos/Digistore-logos_white.png" alt="Digistore-logos">
+            <a href="Index.php">Home</a>
+            <a href="VRs.php">VR</a>
+            <a href="VR-Accessory.php">VR-Accessory</a>
+            <a href="Cameras.php">Camera</a>
+            <a href="Camera-Accessory.php">Camera-Accessory</a>
+            <a href="Hardware&Software.php">Hardware/Software</a>
+            <a id="CA" href="Cart.php"><img src="Bilder/Cart-white.png" alt="cart" id="cart"><p>Cart</p></a>
+        </header>
+    </div>
+
+    
+    <button id="dark" onclick="dark()">Dark</button>
+    <button id="Login"><a href="Login.php">Login</a></button>
 <?php
 include 'db_connect.php';
 
@@ -13,7 +36,7 @@ include 'db_connect.php';
 $sql = "SELECT * FROM products";
 $result = $conn->query($sql);
 
-$desired_product_ids = array("RAM16", "HP", "PSVR2"); // Replace these IDs with the IDs of the products you want to retrieve
+$desired_product_ids = array("RAM16", "HP", "PSVR2",); // Replace these IDs with the IDs of the products you want to retrieve
 
 if ($result->num_rows > 0) {
     $found_products = array();
@@ -67,7 +90,7 @@ $conn->close();
                     <h3>Sosial media</h3>
                     <p>
                         Instagram: <a href="https://www.instagram.com/adamahmed05/" target="_blank">Addy's Insta</a><br>
-                        Twitter: <a href="https://twitter.com/005_addy" target="_blank">Addy's Twitter</a><br>
+                        Twitter: <a href="https://twitter.com/Addy_gaming05" target="_blank">Addy's Twitter</a><br>
                         Linkdin: <a href="https://www.linkedin.com/in/adam-virk-579bb01aa/" target="_blank">Addy's
                             Linedin</a>
                     </p>

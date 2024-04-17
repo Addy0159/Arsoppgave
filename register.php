@@ -85,7 +85,7 @@
                     <h3>Sosial media</h3>
                     <p>
                         Instagram: <a href="https://www.instagram.com/adamahmed05/" target="_blank">Addy's Insta</a><br>
-                        Twitter: <a href="https://twitter.com/005_addy" target="_blank">Addy's Twitter</a><br>
+                        Twitter: <a href="https://twitter.com/Addy_gaming05" target="_blank">Addy's Twitter</a><br>
                         Linkdin: <a href="https://www.linkedin.com/in/adam-virk-579bb01aa/" target="_blank">Addy's
                             Linedin</a>
                     </p>
