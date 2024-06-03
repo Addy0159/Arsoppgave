@@ -123,7 +123,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Check if the query was successful
     if ($result) {
         // Registration successful, redirect to login page
-        header("Location: Login.php");
+        header("Location: login.php");
         exit;
     } else {
         // Registration failed
