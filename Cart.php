@@ -88,7 +88,7 @@ $total = 0;
                     <td>
                         <div id="OM">
                             <h3>About us</h3>
-                            <p>Digistore is an online store that sells tech products at cheap prices.</p>
+                            <p>Digistore is an online store <br> that sells tech products at cheap prices.</p>
                             <p>The Portfolio to the owner <a href="My_work.php">Addy's Portfolio</a></p>
                         </div>
                     </td>

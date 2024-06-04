@@ -52,7 +52,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>ASUS TUF Gaming B650-PLUS
                     <br>WIFI Motherboard
                     <br>2 490,-
-                    <br><button id="Motherboard">Add To Cart</button>
+                    <br><button id="Motherboard" onclick="addToCart('Motherboard')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -63,7 +63,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Kingston FURY Beast RGB
                     <br> DDR4 3200MHz 16GB
                     <br>899,-
-                    <br><button id="RAM16">Add To Cart</button>
+                    <br><button id="RAM16" onclick="addToCart('RAM16')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -74,7 +74,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Microsoft Office Home
                     <br> Student 2021 Norwegian
                     <br>1 690,-
-                    <br><button id="Soft">Add To Cart</button>
+                    <br><button id="Soft" onclick="addToCart('Soft')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -86,7 +86,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Adobe Creative Cloud
                     <br> 1-YEAR SUBSCRIPTION
                     <br>6 999,-
-                    <br><button id="Adobe">Add To Cart</button>
+                    <br><button id="Adobe" onclick="addToCart('Adobe')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -97,7 +97,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>
                     <br>Samsung 870 QVO 2.5''
                     <br>SSD 8TB 6 095,-
-                    <br><button id="Samsung">Add To Cart</button>
+                    <br><button id="Samsung" onclick="addToCart('Samsung')">Add To Cart</button>
                 </p>
             </ul>
         </div>

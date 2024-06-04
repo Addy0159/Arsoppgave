@@ -47,7 +47,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/VR4.png" alt="playstation vr 2 6 690,-">
                 <p>PlayStation VR2
                     <br> 6 690,-
-                    <br><button id="PSVR2">Add To Cart</button>
+                    <br><button id="PSVR2" onclick="addToCart('PSVR2')">Add To Cart</button>
                 </p>
                 <div class="popup" onclick="Pro1()"> Info about product!
                     <span class="popuptext" id="myPopup1">
@@ -67,7 +67,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/VR1.png" alt="HTC VIVE PRO 2 Full Kit 12 899,- (sort/blå)">
                 <p>HTC VIVE PRO 2 Full Kit
                     <br> 12 899,- (sort/blå)
-                    <br><button id="HTC">Add To Cart</button>
+                    <br><button id="HTC" onclick="addToCart('HTC')">Add To Cart</button>
                 </p>
                 <div class="popup" onclick="Pro2()">Info about product!
                     <span class="popuptext" id="myPopup2">
@@ -84,7 +84,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/VR3.png" alt="HP Reverb G2 VR Headset 9 299,- (sort)">
                 <p style="padding-top: 8%;"> HP Reverb G2 VR Headset
                     <br> 9 299,- (sort)
-                    <br><button id="HP">Add To Cart</button>
+                    <br><button id="HP" onclick="addToCart('HP')">Add To Cart</button>
                 </p>
                 <div class="popup" onclick="Pro3()">Info about product!
                     <span class="popuptext" id="myPopup3">
@@ -101,7 +101,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/VR2.png" alt="Meta Quest 2 VR-briller 5 195,- (hvit)">
                 <p>Meta Quest 2 VR-briller
                     <br> 5 195,- (hvit)
-                    <br><button id="Meta">Add To Cart</button>
+                    <br><button id="Meta" onclick="addToCart('Meta')">Add To Cart</button>
                 </p>
 
             </ul>
@@ -112,7 +112,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/VR5.png" alt="Pico 4 All-in-One VR-briller (256 GB) 5395,-">
                 <p>Pico 4 All-in-One VR-brille
                     <br> 5 395,- (256 GB)
-                    <br><button id="Pico">Add To Cart</button>
+                    <br><button id="Pico" onclick="addToCart('Pico')">Add To Cart</button>
                 </p>
             </ul>
         </div>

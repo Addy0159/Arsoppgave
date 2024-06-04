@@ -1119,7 +1119,7 @@ h2 {
     text-decoration: none;
 }
 
-#btnEmpty button {
+#btnEmpty {
     background-color: #ffffff;
     border: #d00000 1px solid;
     padding: 5px;

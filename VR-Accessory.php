@@ -45,7 +45,7 @@ if (isset($_SESSION["user_id"])) {
             <ul class="VRs">
                 <img src="Bilder/Produkter/VR-Strap.png" alt="Meta Quest 2 Elite-reim 799,-">
                 <p>Meta Quest 2 Elite-reim <br>
-                    799,-<br> <button id="reim">Add To Cart</button> </p>
+                    799,-<br> <button id="reim" onclick="addToCart('reim')">Add To Cart</button> </p>
             </ul>
         </div>
         <div id="utstyr">
@@ -53,7 +53,7 @@ if (isset($_SESSION["user_id"])) {
             <ul class="VRs">
                 <img src="Bilder/Produkter/VR-utstyr.png" alt="HWireless Adapter Full Pack with clip 4 499,-(sort/blå)">
                 <p> Wireless Adapter Full Pack with clip <br>
-                    4 499,- <br><button id="Pack">Add To Cart</button> </p>
+                    4 499,- <br><button id="Pack" onclick="addToCart('Pack')">Add To Cart</button> </p>
             </ul>
         </div>
 
@@ -61,7 +61,7 @@ if (isset($_SESSION["user_id"])) {
             <ul class="VRs">
                 <img src="Bilder/Produkter/VR-extra-bateri.png" alt="HTC VIVE Base Station 2.0 2 490,-">
                 <p>HTC VIVE Base Station 2.0 <br>
-                    2 490,- <br><button id="VIVE">Add To Cart</button> </p>
+                    2 490,- <br><button id="VIVE" onclick="addToCart('VIVE')">Add To Cart</button> </p>
             </ul>
         </div>
 
@@ -69,7 +69,7 @@ if (isset($_SESSION["user_id"])) {
             <ul class="VRs">
                 <img src="Bilder/Produkter/VR-case.png" alt="HTC VIVE Focus 3 Charging Carry Case 2 039,-">
                 <p>HTC VIVE Focus 3 Charging Carry Case <br>
-                    2 039,- <br><button id="Case">Add To Cart</button></p>
+                    2 039,- <br><button id="Case" onclick="addToCart('Case')">Add To Cart</button></p>
             </ul>
         </div>
 
@@ -77,7 +77,7 @@ if (isset($_SESSION["user_id"])) {
             <ul class="VRs">
                 <img src="Bilder/Produkter/Sense.png" alt="PlayStation VR2 Sense charging station 529,-">
                 <p>PlayStation VR2 Sense charging station <br>
-                    529,- <br><button id="Sense">Add To Cart</button></p>
+                    529,- <br><button id="Sense" onclick="addToCart('Sense')">Add To Cart</button></p>
             </ul>
         </div>
     </div>

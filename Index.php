@@ -193,13 +193,6 @@ $result = $mysqli->query($sql);
 
     <script src="script.js"></script>
     <script src="Faq.js"></script>
-    <script>
-        function addToCart(productId) {
-            fetch(`add_to_cart.php?id=${productId}`, { method: 'GET' })
-                .then(response => response.json())
-                .then(data => alert(data.message));
-        }
-    </script>
 </body>
 
 </html>

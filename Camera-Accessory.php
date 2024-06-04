@@ -46,7 +46,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/GOpro-strap.png" alt="GoPro Chesty 399,-">
                 <p>GoPro Chesty
                     <br>399,-
-                    <br><button id="strap">Add To Cart</button>
+                    <br><button id="strap" onclick="addToCart('strap')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -57,7 +57,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>GoPro Protective
                     <br>Housing Hero9/10
                     <br>648,-
-                    <br><button id="GOpro-case">Add To Cart</button>
+                    <br><button id="GOpro-case" onclick="addToCart('GOpro-case')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -67,7 +67,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/Kamera.til3.png" alt="Sandstrøm DSLR camera bag 379,-">
                 <p>Sandstrøm DSLR Camera bag
                     <br>379,-
-                    <br><button id="bag">Add To Cart</button>
+                    <br><button id="bag" onclick="addToCart('bag')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -78,7 +78,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Samyang AF 14mm
                     <br>F2.8 lens (Sony E-mount)
                     <br>7 795,-
-                    <br><button id="Samyang">Add To Cart</button>
+                    <br><button id="Samyang" onclick="addToCart('Samyang')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -89,7 +89,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Vlogger Shotgun Microphone
                     <br>ECM-G1
                     <br>1 615,-
-                    <br><button id="Shotgun">Add To Cart</button>
+                    <br><button id="Shotgun" onclick="addToCart('Shotgun')">Add To Cart</button>
                 </p>
             </ul>
         </div>

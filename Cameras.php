@@ -46,7 +46,7 @@ if (isset($_SESSION["user_id"])) {
                 <img src="Bilder/Produkter/GOPro.png" alt="GoPro HERO10 Black">
                 <p>GoPro HERO10 Black
                     <br>5 990,-
-                    <br><button id="GOPRO">Add To Cart</button>
+                    <br><button id="GOPRO" onclick="addToCart('GOPRO')">Add To Cart </button>
                 </p>
             </ul>
         </div>
@@ -58,7 +58,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Sony CyberShot RX100
                     <br> Mark III Compact Camera
                     <br> 7 195,-
-                    <br><button id="Sony">Add To Cart</button>
+                    <br><button id="Sony" onclick="addToCart('SONY')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -69,7 +69,7 @@ if (isset($_SESSION["user_id"])) {
                 <p >Canon EOS 2000D Digital
                     <br> SLR Camera + 18-55 DC3
                     <br> 5 595,-
-                    <br><button id="Camon">Add To Cart</button>
+                    <br><button id="Camon" onclick="addToCart('Camon')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -83,7 +83,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Fujifilm Instax Mini 11
                     <br> Compact Camera (hvit)
                     <br> 999,-
-                    <br><button id="Fuji">Add To Cart</button>
+                    <br><button id="Fuji" onclick="addToCart('Fuji')">Add To Cart</button>
                 </p>
             </ul>
         </div>
@@ -95,7 +95,7 @@ if (isset($_SESSION["user_id"])) {
                 <p>Sony ZV-1F Digital
                     <br> Camera For Vlogging
                     <br> 7 495,-"
-                    <br> <button id="ZV">Add To Cart</button>
+                    <br> <button id="ZV" onclick="addToCart('ZV')">Add To Cart</button>
                 </p>
             </ul>
         </div>
